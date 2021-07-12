@@ -25,7 +25,7 @@ h1{
     color: #fff;
 }
 header{
-    background: url('/images/rhions-lab.jpg');
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('/images/rhions-lab.jpg');
     background-repeat: no-repeat;
     background-size: 200% 115%;
     background-position: -200px 0px;
@@ -223,11 +223,16 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+.footer-top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
 .footer-logo{
     display: flex;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 10px;
 }
 .footer-logo h3{
     margin-left: 15px;
@@ -245,4 +250,98 @@ footer{
 }
 #email{
     fill: rgba(160,174,192,1);
+}
+
+/* desktop view */
+@media (min-width:768px){
+    span{
+        line-height: 30px;
+    }
+    .icons{
+        display: none;
+    }
+ 
+    header{
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('/images/rhions-lab.jpg');
+        background-size: 100% 100%;
+        width: 100%;
+    }
+    nav{
+        width: 95%;
+    }
+    .links{
+        display: flex;
+    }
+    .links a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 0 10px;
+    }
+    .text{
+        text-align: center;
+        width: 55%;
+    }
+    .text p{
+        text-align: center;
+        font-size: 35px;
+    }
+    .our-values{
+        width: 100%;
+    }
+    .values{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap:30px;
+        column-gap: 60px;
+        width: 95%;
+       
+    }
+    .values div{
+        width: 95%;
+    }
+    .values div p{
+        line-height: 30px;
+    }
+    .mission{
+        width: 50%;
+    }
+    .our-products{
+        width: 100%;
+    }
+    .our-products span{
+        width: 43%;
+    }
+    .products{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 60px;
+    }
+    .products div p{
+        line-height: 30px;
+    }
+    .contacts{
+        width: 100%;
+    }
+    #contacts{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        background-color: 95%;
+    }
+    footer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+        width: 100%;
+    }
+    .footer-top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 32.5%;
+    }
 }
